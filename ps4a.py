@@ -80,13 +80,7 @@ def displayHand(hand):
     """
     Displays the letters currently in the hand.
 
-    For example:
-    >>> displayHand({'a':1, 'x':2, 'l':3, 'e':1})
-    Should print out something like:
-       a x x l l l e
-    The order of the letters is unimportant.
-
-    hand: dictionary (string -> int)
+    
     """
     for letter in hand.keys():
         for j in range(hand[letter]):
@@ -97,10 +91,6 @@ def dealHand(n):
     """
     Returns a random hand containing n lowercase letters.
     At least n/3 the letters in the hand should be VOWELS.
-
-    Hands are represented as dictionaries. The keys are
-    letters and the values are the number of times the
-    particular letter is repeated in that hand.
 
     n: int >= 0
     returns: dictionary (string -> int)
@@ -236,10 +226,10 @@ def playGame(wordList):
     Allow the user to play an arbitrary number of hands.
 
     1) Asks the user to input 'n' or 'r' or 'e'.
-      * If the user inputs 'n', let the user play a new (random) hand.
-      * If the user inputs 'r', let the user play the last hand again.
-      * If the user inputs 'e', exit the game.
-      * If the user inputs anything else, tell them their input was invalid.
+      * If the user inputs 'n', the user will play a new hand.
+      * If the user inputs 'r',the user will play the last hand again.
+      * If the user inputs 'e', the game is exited.
+      * If the user inputs anything else, the input is invalid.
  
     2) When done playing the hand, repeat from step 1    
     """
